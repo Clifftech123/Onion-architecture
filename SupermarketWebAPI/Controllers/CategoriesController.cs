@@ -17,10 +17,7 @@ namespace SupermarketWebAPI.Controllers
             _mapper = mapper;
         }
 
-        /// <summary>
-        /// Lists all categories.
-        /// </summary>
-        /// <returns>List os categories.</returns>
+      
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CategoryResource>), 200)]
         public async Task<IEnumerable<CategoryResource>> ListAsync()
@@ -29,11 +26,7 @@ namespace SupermarketWebAPI.Controllers
             return _mapper.Map<IEnumerable<CategoryResource>>(categories);
         }
 
-        /// <summary>
-        /// Saves a new category.
-        /// </summary>
-        /// <param name="resource">Category data.</param>
-        /// <returns>Response for the request.</returns>
+       
         [HttpPost]
         [ProducesResponseType(typeof(CategoryResource), 201)]
         [ProducesResponseType(typeof(ErrorResource), 400)]
@@ -51,12 +44,7 @@ namespace SupermarketWebAPI.Controllers
             return Ok(categoryResource);
         }
 
-        /// <summary>
-        /// Updates an existing category according to an identifier.
-        /// </summary>
-        /// <param name="id">Category identifier.</param>
-        /// <param name="resource">Updated category data.</param>
-        /// <returns>Response for the request.</returns>
+  
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(CategoryResource), 200)]
         [ProducesResponseType(typeof(ErrorResource), 400)]
@@ -74,11 +62,7 @@ namespace SupermarketWebAPI.Controllers
             return Ok(categoryResource);
         }
 
-        /// <summary>
-        /// Deletes a given category according to an identifier.
-        /// </summary>
-        /// <param name="id">Category identifier.</param>
-        /// <returns>Response for the request.</returns>
+    
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(CategoryResource), 200)]
         [ProducesResponseType(typeof(ErrorResource), 400)]

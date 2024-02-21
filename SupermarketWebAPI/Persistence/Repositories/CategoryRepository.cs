@@ -7,7 +7,7 @@ namespace SupermarketWebAPI.Persistence.Repositories
     public class CategoryRepository(AppDbContext context) : BaseRepository(context), ICategoryRepository
     {
 
-        // "AsNoTracking" tells Entity Framework that it is not necessary to track changes for listed entities. This makes code run faster.
+        
         public async Task<IEnumerable<Category>> ListAsync()
             => await _context.Categories.AsNoTracking().ToListAsync();
 

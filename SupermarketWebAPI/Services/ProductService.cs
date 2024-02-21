@@ -32,8 +32,7 @@ namespace SupermarketWebAPI.Services
 
         public async Task<QueryResult<Product>> ListAsync(ProductsQuery query)
         {
-            // Here I list the query result from cache if they exist, but now the data can vary according to the category ID, page and amount of
-            // items per page. I have to compose a cache to avoid returning wrong data.
+           
             string cacheKey = GetCacheKeyForProductsQuery(query);
 
             var products = await _cache.GetOrCreateAsync(cacheKey, (entry) =>
@@ -49,11 +48,7 @@ namespace SupermarketWebAPI.Services
         {
             try
             {
-                /*
-                 Notice here we have to check if the category ID is valid before adding the product, to avoid errors.
-                 You can create a method into the CategoryService class to return the category and inject the service here if you prefer, but 
-                 it doesn't matter given the API scope.
-                */
+              
                 var existingCategory = await _categoryRepository.FindByIdAsync(product.CategoryId);
                 if (existingCategory == null)
                     return new Response<Product>("Invalid category.");

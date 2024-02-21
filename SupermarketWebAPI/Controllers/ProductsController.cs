@@ -17,10 +17,7 @@ namespace SupermarketWebAPI.Controllers
             _mapper = mapper;
         }
 
-        /// <summary>
-        /// Lists all existing products according to query filters.
-        /// </summary>
-        /// <returns>List of products.</returns>
+
         [HttpGet]
         [ProducesResponseType(typeof(QueryResultResource<ProductResource>), 200)]
         public async Task<QueryResultResource<ProductResource>> ListAsync([FromQuery] ProductsQueryResource query)
@@ -31,11 +28,7 @@ namespace SupermarketWebAPI.Controllers
             return _mapper.Map<QueryResultResource<ProductResource>>(queryResult);
         }
 
-        /// <summary>
-        /// Saves a new product.
-        /// </summary>
-        /// <param name="resource">Product data.</param>
-        /// <returns>Response for the request.</returns>
+   
         [HttpPost]
         [ProducesResponseType(typeof(ProductResource), 201)]
         [ProducesResponseType(typeof(ErrorResource), 400)]
@@ -53,12 +46,7 @@ namespace SupermarketWebAPI.Controllers
             return Ok(productResource);
         }
 
-        /// <summary>
-        /// Updates an existing product according to an identifier.
-        /// </summary>
-        /// <param name="id">Product identifier.</param>
-        /// <param name="resource">Product data.</param>
-        /// <returns>Response for the request.</returns>
+      
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(ProductResource), 201)]
         [ProducesResponseType(typeof(ErrorResource), 400)]
@@ -76,11 +64,6 @@ namespace SupermarketWebAPI.Controllers
             return Ok(productResource);
         }
 
-        /// <summary>
-        /// Deletes a given product according to an identifier.
-        /// </summary>
-        /// <param name="id">Product identifier.</param>
-        /// <returns>Response for the request.</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(ProductResource), 200)]
         [ProducesResponseType(typeof(ErrorResource), 400)]
