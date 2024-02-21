@@ -1,6 +1,4 @@
-Certainly! Here's an improved version of your `README.md` file with a more detailed explanation of role-based authentication and additional sections for setup and testing:
 
-```markdown
 # Supermarket Web API
 
 Supermarket Web API is a simple RESTful API built with ASP.NET Core and .NET  8, designed to demonstrate how to create RESTful APIs with role-based authentication. The API provides endpoints for managing products, categories, and orders, and is secured using role-based access control.
