@@ -11,20 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.1.24081.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0-preview.1.24081.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Domain\Repositories\" />
-    <Folder Include="Domain\Services\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Mapping\" />
-    <Folder Include="Services\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Persistence\" />
   </ItemGroup>
 
 </Project>
