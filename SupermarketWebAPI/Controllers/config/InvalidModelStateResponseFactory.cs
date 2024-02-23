@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SupermarketWebAPI.Extensions;
 using SupermarketWebAPI.Resources;
 
 namespace SupermarketWebAPI.Controllers.config

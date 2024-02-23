@@ -1,4 +1,5 @@
-﻿using SupermarketWebAPI.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SupermarketWebAPI.Domain.Models;
 using SupermarketWebAPI.Domain.Repositories;
 using SupermarketWebAPI.Persistence.Context;
 

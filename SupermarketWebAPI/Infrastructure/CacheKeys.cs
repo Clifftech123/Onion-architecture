@@ -4,7 +4,7 @@
     {
 
         CategoriesList,
-        Product
-
+        Product,
+        ProductsList
     }
 }

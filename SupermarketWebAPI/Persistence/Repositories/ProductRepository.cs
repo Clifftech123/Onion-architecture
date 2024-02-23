@@ -24,8 +24,8 @@ namespace SupermarketWebAPI.Persistence.Repositories
 
           
             List<Product> products = await queryable.Skip((query.Page - 1) * query.ItemsPerPage)
-                                                    .Take(query.ItemsPerPage)
-                                                    .ToListAsync();
+              .Take(query.ItemsPerPage)
+              .ToListAsync();
 
           
             return new QueryResult<Product>
