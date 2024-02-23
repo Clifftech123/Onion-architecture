@@ -1,5 +1,7 @@
 ﻿
 
+using SupermarketWebAPI.Domain.Models.Queries;
+
 namespace SupermarketWebAPI.Domain.Repositories
 {
     public interface IProductRepository

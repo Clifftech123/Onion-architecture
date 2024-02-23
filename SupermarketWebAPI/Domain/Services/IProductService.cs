@@ -8,5 +8,7 @@ namespace SupermarketWebAPI.Domain.Services
         Task<Response<Product>> SaveAsync(Product product);
         Task<Response<Product>> UpdateAsync(int id, Product product);
         Task<Response<Product>> DeleteAsync(int id);
+        Task<Response<Product>> SaveDraftAsync(Product product); 
     }
+
 }

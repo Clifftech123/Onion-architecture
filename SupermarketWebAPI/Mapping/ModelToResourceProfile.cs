@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using SupermarketWebAPI.Domain.Models;
+using SupermarketWebAPI.Domain.Models.Queries;
 using SupermarketWebAPI.Extensions;
 using SupermarketWebAPI.Resources;
 
